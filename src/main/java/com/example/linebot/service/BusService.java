@@ -33,19 +33,12 @@ public class BusService {
                     ? "公立千歳科学技術大学 ➔ 千歳駅"
                     : "千歳駅 ➔ 公立千歳科学技術大学";
 
+            String busList = String.join("、", response.nextBuses());
+
             return String.format(
-                    "🚌 次のバス案内【%s】\n\n" +
-                            "📅 日付: %s\n" +
-                            "⏰ 出発: %s（%s）\n" +
-                            "🏁 到着: %s\n" +
-                            "🚍 路線: %s（%s）",
+                    "🚌 次のバス【%s】\n\n%s",
                     dirLabel,
-                    response.dateLabel(),
-                    response.departureTime(),
-                    response.boardingStop(),
-                    response.arrival(),
-                    response.route(),
-                    response.operator()
+                    busList
             );
 
         } catch (Exception e) {

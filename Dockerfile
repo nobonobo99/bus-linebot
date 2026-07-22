@@ -1,4 +1,5 @@
 # ビルド用ステージ(Java 25でMavenビルド)
+#Railwayがjava21までしか対応してない
 FROM eclipse-temurin:25-jdk AS build
 WORKDIR /app
 COPY . .
