@@ -1,0 +1,5 @@
+# Cloud Native Buildpacks プロジェクト記述子
+# Buildpacks はデフォルトで Java 21 を使うため、Java 25 を明示指定する。
+[[build.env]]
+name = "GOOGLE_RUNTIME_VERSION"
+value = "25"
